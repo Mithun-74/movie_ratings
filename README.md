@@ -1,12 +1,37 @@
-# React + Vite
+# 🎬 Movie Explorer App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React-based movie application that lets users search for movies using the OMDb API. Users can also add movies to their **Favorites** and **Watch Later** lists, which are saved in local storage for persistence.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🔍 Search movies via the OMDb API
+- ❤️ Add and remove movies from Favorites
+- 🕒 Add movies to a Watch Later list
+- 💾 LocalStorage persistence
+- ⚙️ React Context API for global state
+- 💅 Clean UI with responsive design
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📸 Screenshots
+[home](image-1.png)
+[favorites](image.png)
+
+---
+
+## 🛠️ Tech Stack
+
+- [React.js](https://react.dev/)
+- [React Router DOM](https://reactrouter.com/)
+- [OMDb API](https://www.omdbapi.com/)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- React Context API
+
+---
+
+## 🔧 Setup Instructions
+
+1. **Clone the Repository**
+
