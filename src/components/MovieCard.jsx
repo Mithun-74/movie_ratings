@@ -1,28 +1,35 @@
-import React from 'react';
 import "../CSS/MovieCard.css";
+import { useMovieContext } from "../context/MovieContent";
 
-const MovieCard = ({ movie }) => {
-  const onFavoriteClick = () => {
-    alert(`YOU LIKED ${movie.Title}`);
-  };
+function MovieCard({ movie }) {
+  const { isFavorite, addToFavorites, removeFromFavorites } = useMovieContext();
+  const favorite = isFavorite(movie.imdbID);
+
+  function onFavoriteClick(e) {
+    e.preventDefault();
+    if (favorite) removeFromFavorites(movie.imdbID);
+    else addToFavorites(movie);
+  }
 
   return (
-    <div className="Movie-card">
-      <div className="poster">
+    <div className="movie-card">
+      <div className="movie-poster">
         <img src={movie.Poster} alt={movie.Title} />
         <div className="movie-overlay">
-          <button className="favourite-btn" onClick={onFavoriteClick}>
-            Like
+          <button
+            className={`favorite-btn ${favorite ? "active" : ""}`}
+            onClick={onFavoriteClick}
+          >
+            ♥ 
           </button>
         </div>
       </div>
       <div className="movie-info">
         <h3>{movie.Title}</h3>
         <p>{movie.Year}</p>
-        {movie.imdbRating && <p>IMDb: {movie.imdbRating}</p>}
       </div>
     </div>
   );
-};
+}
 
 export default MovieCard;

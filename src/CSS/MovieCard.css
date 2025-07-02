@@ -1,4 +1,4 @@
-.Movie-card {
+.movie-card {
   position: relative;
   border-radius: 8px;
   overflow: hidden;
@@ -9,17 +9,17 @@
   flex-direction: column;
 }
 
-.Movie-card:hover {
+.movie-card:hover {
   transform: translateY(-5px);
 }
 
-.poster {
+.movie-poster {
   position: relative;
   aspect-ratio: 2/3;
   width: 100%;
 }
 
-.poster img {
+.movie-poster img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -44,7 +44,7 @@
   padding: 1rem;
 }
 
-.Movie-card:hover .movie-overlay {
+.movie-card:hover .movie-overlay {
   opacity: 1;
 }
 
